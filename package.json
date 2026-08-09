@@ -1,0 +1,9 @@
+{
+    "name": "chongmoo-root",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "cd web && npm install --legacy-peer-deps && npm run build",
+        "pages:build": "cd web && npm install --legacy-peer-deps && npx @cloudflare/next-on-pages"
+    }
+}
