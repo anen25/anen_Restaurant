@@ -5,5 +5,8 @@
     "scripts": {
         "build": "cd web && npm install --legacy-peer-deps && npm run build",
         "pages:build": "cd web && npm install --legacy-peer-deps && npx @cloudflare/next-on-pages"
+    },
+    "overrides": {
+        "@cloudflare/workers-types": "^4.20240208.0"
     }
 }

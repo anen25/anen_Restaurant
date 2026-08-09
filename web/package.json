@@ -28,5 +28,8 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^3.100.0"
+  },
+  "overrides": {
+    "@cloudflare/workers-types": "^4.20240208.0"
   }
 }
