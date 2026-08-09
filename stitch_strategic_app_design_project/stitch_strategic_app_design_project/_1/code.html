@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>총무 인계 관리</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-red": "#DC2626",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "premium-gold": "#D97706",
+                    "on-secondary-container": "#fefcff",
+                    "success-green": "#059669",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-error-container": "#93000a",
+                    "secondary": "#0051d5",
+                    "primary": "#000000",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline": "#76777d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#cf6721",
+                    "tertiary-container": "#331200",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-container": "#316bf3",
+                    "surface": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "member-tag-text": "#1E40AF",
+                    "inverse-on-surface": "#eff1f3",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-tertiary-fixed": "#331200",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "primary-container": "#131b2e",
+                    "on-surface-variant": "#45464d",
+                    "tertiary": "#000000",
+                    "surface-tint": "#565e74",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary-fixed": "#131b2e",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "member-tag-bg": "#EFF6FF",
+                    "on-primary-container": "#7c839b",
+                    "inverse-primary": "#bec6e0",
+                    "surface-variant": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "gutter-lg": "24px",
+                    "max-width": "1200px",
+                    "gutter-sm": "8px",
+                    "gutter-md": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "status-badge": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- Top App Bar -->
+<header class="bg-surface-container-lowest dark:bg-primary-container w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">총무 인계 관리</h1>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional corporate portrait of a business manager in a clean, modern setting with soft studio lighting and a neutral grey background, representing trust and authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYEsgLYK0sKig3ENppZzFEinALvAX4IKsNVMx-H0xh0WVVBBwS7ixC6KdXmlMbxDy8GKh3CXMMkrxNAl9i87r5AW7QkKz5onOrVP7FVV4KshPTvo8gvBHrln2Oc73eZoRCXX7Yni8w6ZhTpG4cl0ap7CwCrUNLY-qF4514pa0BFaToENxmyOKd_MyaU75Q5jzpuJ6tJteN73K13XfVvbQMku5_s8qPiR99mj2xvfBCY4pHvMctqifM"/>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-gutter-lg pb-32">
+<!-- Intro & Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<div class="lg:col-span-8 flex flex-col gap-gutter-md">
+<div class="bg-surface-container-lowest p-gutter-lg rounded-xl border border-outline-variant shadow-sm relative overflow-hidden">
+<!-- Subtle Background Decoration -->
+<div class="absolute -top-10 -right-10 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]">admin_panel_settings</span>
+</div>
+<div class="relative z-10">
+<span class="bg-secondary-container text-on-secondary-container font-status-badge text-status-badge px-3 py-1 rounded-full mb-4 inline-block">전환 프로세스</span>
+<h2 class="font-headline-lg text-headline-lg mb-2">총무 권한을 안전하게<br/>인계하십시오</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8 max-w-lg">
+                            인계 코드를 생성하여 다음 관리자에게 공유하세요. 코드가 등록되면 2주 동안 두 분 모두 관리 페이지에 접근할 수 있습니다.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary font-body-md text-body-md px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95" id="generateBtn" onclick="generateCode()">
+<span class="material-symbols-outlined">key</span>
+                                인계 코드 생성하기
+                            </button>
+<button class="bg-surface-container-lowest border border-primary text-primary font-body-md text-body-md px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined">content_copy</span>
+                                공지 문구 복사
+                            </button>
+</div>
+</div>
+</div>
+<!-- Handover Status / History (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+<div class="bg-white p-gutter-md rounded-xl border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-md text-headline-md">진행 상태</h3>
+<span class="text-success-green font-status-badge text-status-badge bg-success-green/10 px-2 py-1 rounded">정상</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">인계 유효 기간</p>
+<p class="font-body-md text-body-md font-semibold">2024.06.01 - 2024.06.15</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<p class="font-body-sm text-body-sm text-on-surface-variant">※ 기한 만료 후 모든 권한이 자동 승계됩니다.</p>
+</div>
+</div>
+<div class="bg-white p-gutter-md rounded-xl border border-outline-variant">
+<h3 class="font-headline-md text-headline-md mb-4">최근 기록</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">history</span>
+<div>
+<p class="font-body-md text-body-md">인계 요청</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2024.05.20 14:30</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-label-mono text-label-mono">완료</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">verified_user</span>
+<div>
+<p class="font-body-md text-body-md">본인 인증 완료</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2024.05.20 14:28</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-label-mono text-label-mono">완료</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Info Panel -->
+<div class="lg:col-span-4 flex flex-col gap-gutter-md">
+<div class="bg-primary-container text-on-primary-container p-gutter-md rounded-xl">
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>
+                        주의사항
+                    </h3>
+<ul class="space-y-4 font-body-md text-body-md opacity-90">
+<li class="flex gap-2">
+<span class="text-secondary-fixed">•</span>
+                            코드의 유효기간은 생성 후 24시간입니다.
+                        </li>
+<li class="flex gap-2">
+<span class="text-secondary-fixed">•</span>
+                            인계가 완료된 후에는 기존 총무의 결제 권한이 제한될 수 있습니다.
+                        </li>
+<li class="flex gap-2">
+<span class="text-secondary-fixed">•</span>
+                            데이터 무결성을 위해 인계 기간 중 예산 변경은 지양해 주세요.
+                        </li>
+</ul>
+</div>
+<div class="bg-white p-gutter-md rounded-xl border border-outline-variant">
+<h3 class="font-headline-md text-headline-md mb-4">현재 관리 그룹</h3>
+<div class="flex items-center gap-4 p-4 border border-outline-variant rounded-lg">
+<div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg font-bold">마케팅 1팀 미식회</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">구성원 12명</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Code Generation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center hidden" id="codeModal">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" onclick="closeModal()"></div>
+<div class="bg-white w-full max-w-md mx-margin-mobile p-gutter-lg rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+<button class="absolute top-4 right-4 text-outline hover:text-primary" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="text-center">
+<div class="w-16 h-16 bg-member-tag-bg text-secondary mx-auto rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl">vpn_key</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-2">인계 코드 생성 완료</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8">차기 총무에게 아래 코드를 전달해 주세요.</p>
+<div class="bg-surface-container p-6 rounded-xl mb-8 group relative cursor-pointer" onclick="copyToClipboard()">
+<span class="font-label-mono text-3xl font-bold tracking-widest text-primary" id="generatedCode">HX-928-SKL</span>
+<div class="absolute inset-0 flex items-center justify-center bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
+<span class="font-body-sm text-body-sm font-semibold">클릭하여 복사</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary font-body-md text-body-md py-4 rounded-lg" onclick="closeModal()">확인</button>
+<p class="font-body-sm text-body-sm text-on-surface-variant">유효 시간: 23:59:45 남음</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-lg bg-surface-container-lowest dark:bg-primary-container border-t border-outline-variant dark:border-outline shadow-sm h-20 flex justify-around items-center px-gutter-md">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-mono text-label-mono">홈</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-3 py-1">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-mono text-label-mono">내 모임</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-mono text-label-mono">추천</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-mono text-label-mono">프로필</span>
+</div>
+</nav>
+<script>
+        function generateCode() {
+            const modal = document.getElementById('codeModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('codeModal');
+            modal.classList.add('hidden');
+        }
+
+        function copyToClipboard() {
+            const code = document.getElementById('generatedCode').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('코드가 클립보드에 복사되었습니다.');
+            });
+        }
+    </script>
+</body></html>

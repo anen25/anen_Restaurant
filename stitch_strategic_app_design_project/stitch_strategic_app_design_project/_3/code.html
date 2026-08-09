@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>참석자 명단 상세 | 아는 식당</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #E2E8F0;
+        }
+        .status-pill-attending { background-color: #ECFDF5; color: #059669; }
+        .status-pill-declined { background-color: #FEF2F2; color: #DC2626; }
+        .status-pill-pending { background-color: #F8FAFC; color: #64748B; }
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-red": "#DC2626",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "premium-gold": "#D97706",
+                    "on-secondary-container": "#fefcff",
+                    "success-green": "#059669",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-error-container": "#93000a",
+                    "secondary": "#0051d5",
+                    "primary": "#000000",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline": "#76777d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#cf6721",
+                    "tertiary-container": "#331200",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-container": "#316bf3",
+                    "surface": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "member-tag-text": "#1E40AF",
+                    "inverse-on-surface": "#eff1f3",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-tertiary-fixed": "#331200",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "primary-container": "#131b2e",
+                    "on-surface-variant": "#45464d",
+                    "tertiary": "#000000",
+                    "surface-tint": "#565e74",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary-fixed": "#131b2e",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "member-tag-bg": "#EFF6FF",
+                    "on-primary-container": "#7c839b",
+                    "inverse-primary": "#bec6e0",
+                    "surface-variant": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "gutter-lg": "24px",
+                    "max-width": "1200px",
+                    "gutter-sm": "8px",
+                    "gutter-md": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "status-badge": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-primary-container w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 transition-colors duration-200">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low dark:hover:bg-primary-fixed-dim rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">참석자 명단 상세</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, professional headshot of a Korean business manager in a modern office setting. Soft studio lighting, minimalist corporate background, wearing a tailored navy blazer. High-end, executive style with professional clarity and confidence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgzl1LeSN-PCrK-rp1rnkcJM__oy5cL0Rn_qFbDycLUq35K_K3Nf4TYJJU49Lr5zCsEptrkBlBxDWzBmU_cFmZtA5pwaCltNDCPlMb9nS3e6Q7Aehd4WsgS5-0di0HmzfYpFyptkxg8Z_iQYuEZfdfMrg_D9QHqioEzyBm30x0evjyC7KDtn8gcI-gWW4RkQzjQBTMwNGFNhoE1g9l3ZwYnQF_P3LRxbzU-HLi5fwjIbn8zBxPWwF"/>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-gutter-lg">
+<!-- Summary Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md mb-gutter-lg">
+<!-- Attending -->
+<div class="bg-surface-container-lowest border border-outline-variant p-gutter-md rounded-xl shadow-sm flex flex-col justify-between h-32">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant">참석 확정</span>
+<span class="material-symbols-outlined text-success-green" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold">12</span>
+<span class="font-body-md text-body-md text-on-surface-variant">명</span>
+</div>
+</div>
+<!-- Not Attending -->
+<div class="bg-surface-container-lowest border border-outline-variant p-gutter-md rounded-xl shadow-sm flex flex-col justify-between h-32">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant">불참</span>
+<span class="material-symbols-outlined text-error-red" data-icon="cancel" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold">3</span>
+<span class="font-body-md text-body-md text-on-surface-variant">명</span>
+</div>
+</div>
+<!-- No Response -->
+<div class="bg-surface-container-lowest border border-outline-variant p-gutter-md rounded-xl shadow-sm flex flex-col justify-between h-32">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant">미응답</span>
+<span class="material-symbols-outlined text-outline" data-icon="help" style="font-variation-settings: 'FILL' 1;">help</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold">5</span>
+<span class="font-body-md text-body-md text-on-surface-variant">명</span>
+</div>
+</div>
+</section>
+<!-- Attendance List Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-gutter-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">상세 명단</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">총 20명의 멤버 중 15명이 응답했습니다.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg bg-surface-container-lowest font-body-md text-body-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                    필터링
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg bg-surface-container-lowest font-body-md text-body-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                    내보내기
+                </button>
+</div>
+</div>
+<!-- Attendance Table/List -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="px-6 py-4 font-label-mono text-label-mono text-on-surface-variant">멤버 정보</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-on-surface-variant">상태</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-on-surface-variant">응답 일시</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-on-surface-variant text-right">관리</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Attending Row -->
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">김</div>
+<div>
+<div class="font-body-md text-body-md font-bold">김철수 상무</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">영업본부</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full font-status-badge text-status-badge status-pill-attending">참석 확정</span>
+</td>
+<td class="px-6 py-4 font-body-sm text-body-sm text-on-surface-variant">
+                                2023.10.24 14:30
+                            </td>
+<td class="px-6 py-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Declined Row -->
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface">이</div>
+<div>
+<div class="font-body-md text-body-md font-bold">이영희 팀장</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">마케팅부</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full font-status-badge text-status-badge status-pill-declined">불참</span>
+</td>
+<td class="px-6 py-4 font-body-sm text-body-sm text-on-surface-variant">
+                                2023.10.24 16:45
+                            </td>
+<td class="px-6 py-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Pending Row (PRD 4.4 Focus) -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center font-bold text-on-surface-variant">박</div>
+<div>
+<div class="font-body-md text-body-md font-bold">박민수 과장</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">개발팀</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full font-status-badge text-status-badge status-pill-pending">미응답</span>
+</td>
+<td class="px-6 py-4 font-body-sm text-body-sm text-on-surface-variant italic">
+                                -
+                            </td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 border border-secondary text-secondary font-status-badge text-status-badge rounded-md hover:bg-secondary/5 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                                        리마인드
+                                    </button>
+<button class="px-3 py-1.5 border border-outline text-on-surface-variant font-status-badge text-status-badge rounded-md hover:bg-surface-container-high transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call</span>
+                                        전화하기
+                                    </button>
+</div>
+</td>
+</tr>
+<!-- Another Pending Row -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center font-bold text-on-surface-variant">최</div>
+<div>
+<div class="font-body-md text-body-md font-bold">최지우 대리</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">인사팀</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full font-status-badge text-status-badge status-pill-pending">미응답</span>
+</td>
+<td class="px-6 py-4 font-body-sm text-body-sm text-on-surface-variant italic">
+                                -
+                            </td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 border border-secondary text-secondary font-status-badge text-status-badge rounded-md hover:bg-secondary/5 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+                                        리마인드
+                                    </button>
+<button class="px-3 py-1.5 border border-outline text-on-surface-variant font-status-badge text-status-badge rounded-md hover:bg-surface-container-high transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call</span>
+                                        전화하기
+                                    </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Justification Notice -->
+<div class="mt-gutter-lg p-gutter-md bg-member-tag-bg border border-member-tag-bg rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-member-tag-text mt-1" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<h4 class="font-body-md text-body-md font-bold text-member-tag-text">인원 확정 안내</h4>
+<p class="font-body-sm text-body-sm text-member-tag-text mt-1">예약 부도(No-Show) 방지 및 객관적인 비용 정산을 위해 실제 참석 인원을 정확히 입력해주세요. 확정된 인원 정보는 정산 명분의 기초 데이터로 활용됩니다.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Actions Container (Sticky) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant p-4 z-40 shadow-lg">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<button class="w-full h-14 bg-primary text-on-primary font-body-lg text-body-lg font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-all active:scale-[0.98]">
+                최종 인원 확정하기
+                <span class="material-symbols-outlined">how_to_reg</span>
+</button>
+</div>
+</div>
+<!-- Navigation (Suppressed per "The Destination Rule" for sub-pages, but showing BottomNavBar structure as requested for shell context if this were a main view) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-lg bg-surface-container-lowest border-t border-outline-variant shadow-sm flex justify-around items-center h-20 pb-safe px-gutter-md md:hidden pointer-events-none opacity-0">
+<!-- Hidden but maintaining structure for logic -->
+</nav>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('.material-symbols-outlined');
+                if(icon && this.innerText.includes('리마인드')) {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = `<span class="material-symbols-outlined text-[14px] animate-spin">sync</span> 전송 중...`;
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span> 전송 완료`;
+                        this.classList.replace('text-secondary', 'text-success-green');
+                        this.classList.replace('border-secondary', 'border-success-green');
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body></html>

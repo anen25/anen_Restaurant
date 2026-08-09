@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>아는 식당 파트너 - 식당 파트너 랜딩</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-red": "#DC2626",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "premium-gold": "#D97706",
+                    "on-secondary-container": "#fefcff",
+                    "success-green": "#059669",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-error-container": "#93000a",
+                    "secondary": "#0051d5",
+                    "primary": "#000000",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline": "#76777d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#cf6721",
+                    "tertiary-container": "#331200",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-container": "#316bf3",
+                    "surface": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "member-tag-text": "#1E40AF",
+                    "inverse-on-surface": "#eff1f3",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-tertiary-fixed": "#331200",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "primary-container": "#131b2e",
+                    "on-surface-variant": "#45464d",
+                    "tertiary": "#000000",
+                    "surface-tint": "#565e74",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary-fixed": "#131b2e",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "member-tag-bg": "#EFF6FF",
+                    "on-primary-container": "#7c839b",
+                    "inverse-primary": "#bec6e0",
+                    "surface-variant": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "gutter-lg": "24px",
+                    "max-width": "1200px",
+                    "gutter-sm": "8px",
+                    "gutter-md": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "status-badge": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f7f9fb;
+            background-image: radial-gradient(at 0% 0%, rgba(49, 107, 243, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.03) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-mesh font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface-container-lowest dark:bg-primary-container border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed cursor-pointer">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">아는 식당</h1>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<nav class="flex gap-6">
+<a class="font-label-mono text-label-mono text-primary dark:text-primary-fixed" href="#">서비스 소개</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors" href="#">파트너 혜택</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors" href="#">이용 안내</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-mono text-label-mono hover:opacity-90 transition-opacity">입점 신청</button>
+</div>
+<div class="md:hidden">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pb-24">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full mb-6">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-status-badge text-status-badge">대한민국 식당 경영주를 위한 최상의 파트너</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 leading-tight">
+                        마케팅비 0원, <br/>
+                        예약 1인당 단돈 <span class="text-secondary font-extrabold">1,000원</span>
+</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-10 max-w-lg">
+                        불필요한 광고비 지출은 이제 그만. <br/>
+                        아는 식당은 실질적인 예약 성과에 대해서만 정직한 비용을 청구합니다.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md text-headline-md flex items-center justify-center gap-2 hover:shadow-lg transition-shadow">
+                            내 식당 등록하기
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-8 py-4 rounded-xl font-headline-md text-headline-md flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
+                            상담 신청하기
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
+
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional top-down shot of a modern, high-end restaurant interior with clean wooden tables, minimalist decor, and warm ambient lighting. The atmosphere is sophisticated and quiet, conveying trust and premium service. In the corner, a digital tablet displays a sleek reservation interface. The color palette is composed of soft slates, deep navies, and warm wood tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDESJkBXNQPz9LYLR0KgSy9ocrIQiuz0JnhXb1Louwif7DywuveUxovn2KSYMHLAiPvY5PDG5QNCvpEnRBwZmxCluz13ZGtZGbufqup6RYTtISYo4KEvv-TVQaAn-R4_1ZoVm81BqekmE29cstCQ7Y8rh3cksBcF_4HfYocHHeKsvkqcNiu8BjrJ2PxhVDYh5_QpvjJzwz_t40FjOC2wrEuz6BDgquvWhknl-YvP7yqqueJkXQfgX7t')"></div>
+</div>
+<!-- Floating Stat Card -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl hidden md:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-success-green/10 text-success-green rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-mono text-label-mono">평균 매출 상승</p>
+<p class="font-headline-md text-headline-md font-bold text-primary">+24%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Prop (Bento Grid) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg text-headline-lg mb-4">왜 '아는 식당' 이어야 할까요?</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">사장님의 성공이 곧 우리의 성공입니다.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter-lg">
+<div class="md:col-span-2 glass-card p-10 rounded-3xl flex flex-col justify-between hover:border-secondary transition-colors group">
+<div>
+<div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[32px]">payments</span>
+</div>
+<h4 class="font-headline-lg text-headline-lg mb-4 group-hover:text-secondary transition-colors">고정 비용 제로</h4>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-md">월정액 광고비, 가입비, 교육비가 전혀 없습니다. 실제 방문한 손님 1인당 1,000원의 수수료만 지불하세요.</p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<span class="px-4 py-2 bg-surface-container rounded-full font-label-mono text-label-mono">#투명한_정산</span>
+<span class="px-4 py-2 bg-surface-container rounded-full font-label-mono text-label-mono">#성과_중심</span>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary-fixed p-10 rounded-3xl flex flex-col">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-white">스마트 타겟팅</h4>
+<p class="text-on-primary-container font-body-md text-body-md mb-8">AI가 우리 식당에 딱 맞는 미팅 성격의 단체 손님을 우선적으로 매칭하여 예약 성사율을 높입니다.</p>
+<div class="mt-auto overflow-hidden rounded-xl h-32 relative">
+<div class="w-full h-full bg-cover" data-alt="A clean, minimalist UI dashboard illustration showing data analytics graphs and circular progress charts. The colors are dominated by deep navy and professional blue. The design is abstract but clearly represents smart matching technology and information hierarchy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUzL1UeYO2jsR9QYJHCAxJJQkXTyh7ph-h5_t6qwKUK3PyEZvr2e7dQ_mQgqe8vU_g_tfrIByyJnPdZ993aKCf6Ag1jlLAVIve6IsFUjSWQpuDjJ-yABnRWq9FfJsEckFCZc2zLqGl-PbzsP2oiCfm_ZB4QvXZsWp272XPMXsTMtDo42xb1MsTDgefb1NEVkBRofagKjrWdTAhzjT2gWDRzegAmGMuT0hD5_6xs2uBgAeW3hCXUBq1')"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-10 rounded-3xl">
+<div class="w-14 h-14 bg-premium-gold/10 text-premium-gold rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[32px]">security</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4">신뢰 기반 노쇼 방지</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">엄격한 회원 인증 시스템을 통해 노쇼(No-Show) 확률을 1% 미만으로 관리합니다.</p>
+</div>
+<div class="md:col-span-2 glass-card p-10 rounded-3xl flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="flex-1">
+<h4 class="font-headline-md text-headline-md mb-4">자동화된 예약 관리</h4>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">전화 응대의 번거로움 없이 클릭 한 번으로 모든 예약을 관리하고 자동으로 정산됩니다.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-label-mono text-label-mono text-secondary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                                실시간 앱 푸시 알림
+                            </li>
+<li class="flex items-center gap-2 font-label-mono text-label-mono text-secondary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                                자동 주간 정산 리포트
+                            </li>
+</ul>
+</div>
+<div class="w-full md:w-64 h-48 bg-surface rounded-2xl border border-outline-variant relative overflow-hidden">
+
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-20 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg text-headline-lg mb-4">파트너십 시작 프로세스</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">단 3일이면 아는 식당 파트너가 될 수 있습니다.</p>
+</div>
+<div class="relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="grid md:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-md text-headline-md mb-6 shadow-xl border-4 border-white">1</div>
+<h5 class="font-headline-md text-headline-md mb-2">식당 정보 등록</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm px-4">식당의 위치, 메뉴, 운영 시간을 간편하게 등록하세요.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-white text-primary flex items-center justify-center font-headline-md text-headline-md mb-6 shadow-md border-4 border-white">2</div>
+<h5 class="font-headline-md text-headline-md mb-2">운영 심사</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm px-4">전문 검수팀이 24시간 이내에 식당의 적합성을 확인합니다.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-white text-primary flex items-center justify-center font-headline-md text-headline-md mb-6 shadow-md border-4 border-white">3</div>
+<h5 class="font-headline-md text-headline-md mb-2">파트너 승인</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm px-4">승인 즉시 '아는 식당' 앱 내 추천 리스트에 노출됩니다.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-white flex items-center justify-center font-headline-md text-headline-md mb-6 shadow-xl border-4 border-white">
+<span class="material-symbols-outlined">auto_graph</span>
+</div>
+<h5 class="font-headline-md text-headline-md mb-2">자동 예약/정산</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm px-4">손님 방문 시 자동 정산되며 편리하게 관리됩니다.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-4xl mx-auto glass-card p-12 rounded-[40px] text-center relative overflow-hidden">
+
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg mb-6">지금 바로 1만 명의 우수 고객과 만나보세요</h3>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-10">입점비 무료 혜택은 이번 달까지만 제공됩니다.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-2xl font-headline-md text-headline-md hover:scale-105 transition-transform shadow-xl">내 식당 무료 등록하기</button>
+</div>
+<p class="mt-8 text-on-surface-variant font-body-sm text-body-sm">문의: 1544-XXXX | partnership@known-res.co.kr</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-lg bg-surface-container-lowest dark:bg-primary-container border-t border-outline-variant dark:border-outline shadow-sm flex justify-around items-center h-20 pb-safe px-gutter-md">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-mono text-label-mono">홈</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-mono text-label-mono">내 모임</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-mono text-label-mono">추천</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-mono text-label-mono">프로필</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Intersection Observer for animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, .bg-primary-container').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

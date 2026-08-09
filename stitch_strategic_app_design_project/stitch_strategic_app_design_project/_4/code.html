@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>가입 심사 대기 | 아는 식당</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            -webkit-font-smoothing: antialiased;
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 767px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-red": "#DC2626",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "premium-gold": "#D97706",
+                        "on-secondary-container": "#fefcff",
+                        "success-green": "#059669",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error-container": "#93000a",
+                        "secondary": "#0051d5",
+                        "primary": "#000000",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline": "#76777d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#cf6721",
+                        "tertiary-container": "#331200",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-container": "#316bf3",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#ffb68e",
+                        "member-tag-text": "#1E40AF",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1e",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-tertiary-fixed": "#331200",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "primary-container": "#131b2e",
+                        "on-surface-variant": "#45464d",
+                        "tertiary": "#000000",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-fixed": "#131b2e",
+                        "background": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "member-tag-bg": "#EFF6FF",
+                        "on-primary-container": "#7c839b",
+                        "inverse-primary": "#bec6e0",
+                        "surface-variant": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "gutter-lg": "24px",
+                        "max-width": "1200px",
+                        "gutter-sm": "8px",
+                        "gutter-md": "16px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "status-badge": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-primary-fixed w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50 transition-colors duration-200">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined hover:bg-surface-container-low dark:hover:bg-primary-fixed-dim p-2 rounded-full transition-colors" data-icon="menu">menu</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">아는 식당</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, professional headshot of a corporate manager in a high-key studio setting. The lighting is soft and flattering, emphasizing a trustworthy and organized persona. The background is a muted slate gray, aligning with a premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxn9nFVRu0J3oOV0QcM2Xkh578H9cJ86Bm7G1RxdK-9hBrtkl_57AXrphgwB6Y-MAtmm4f2BB-3C1LX3Oa26VwxP9mWxELBmoBe8SMwi0h67h3fn0KL3U2WbmnvLlybNZllRRbvemEHeUjzDqIypchBhMgtL9oiIVaHzmdxukbyiayfCBrBNCOBfNs0qV-83O0Y_TNgOffnucDJJdjm01KrnTHaD8UuE72tYYyAIDP-op87RrSYMO"/>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center py-12 px-margin-mobile">
+<div class="max-w-[800px] w-full space-y-8">
+<!-- Hero Status Section -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant premium-shadow overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full font-status-badge text-status-badge uppercase tracking-wider">심사 중</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">가입 심사 대기</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        커넥터가 그룹 가입 신청을 확인하고 있습니다.<br/>
+                        데이터에 기반한 객관적인 검토를 통해<br/>
+                        프라이빗한 미식 네트워크를 유지합니다.
+                    </p>
+</div>
+<div class="md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated digital artwork featuring abstract glass-like geometric shards reflecting a soft navy and gold light palette. The atmosphere is professional, quiet, and high-end, representing the 'Objective Authority' design philosophy. In the center, a subtle glowing magnifying glass icon is integrated into the structure, symbolizing a meticulous review process." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnVy98l09X5XfFIuxycQ_HAJSFpXz6UM05r2NU6QDXadpRqdESU44iGy6PqkAW8OV-76_4IfW4QtfueIXWFsDedJzY8kGAnMXGO3OoPaVbP0oCgD2Uk7WHkrzwO5U5r6Nd8dGmknWcPLP9fOmaifdsGEO49pDH82z0OeT-a8PdZ7yldpiSVlOQyDKH5hyQDSkRerzdpK1H4pMnq6USsOLnZdmwLHfz3tbPiuH2YVsjNhpkmotO23Gh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+</div>
+</div>
+<!-- "What Happens Next" Bento Grid -->
+<div class="bento-grid">
+<!-- Step 1: Review -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center mb-4 text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="fact_check">fact_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Step 1. 검토</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">관리자가 그룹의 성격과 예산 범위, 주요 미팅 목적을 세밀하게 분석합니다.</p>
+</div>
+<!-- Step 2: Approval -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col">
+<div class="w-10 h-10 rounded-lg bg-success-green/10 flex items-center justify-center mb-4 text-success-green">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Step 2. 승인</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">심사가 완료되면 알림톡으로 결과를 안내드리며, 플랫폼의 모든 권한이 활성화됩니다.</p>
+</div>
+<!-- Step 3: Setup -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col">
+<div class="w-10 h-10 rounded-lg bg-premium-gold/10 flex items-center justify-center mb-4 text-premium-gold">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Step 3. 설정</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">상세 프로필과 선호 레스토랑을 설정하여 최적화된 추천 알고리즘을 경험하세요.</p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col md:flex-row gap-4 justify-center pt-8">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md text-headline-md hover:opacity-90 transition-opacity flex items-center justify-center gap-2 premium-shadow">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                    심사 상태 확인
+                </button>
+<button class="bg-surface-container-lowest text-primary border border-primary px-8 py-4 rounded-xl font-headline-md text-headline-md hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2">
+                    랜딩 페이지로 이동
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Evidence Footer -->
+<div class="text-center py-6 border-t border-outline-variant">
+<p class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest">
+                    Authorized Professional Network · Since 2024
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-lg bg-surface-container-lowest dark:bg-primary-container border-t border-outline-variant dark:border-outline shadow-sm flex justify-around items-center h-20 pb-safe px-gutter-md">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-mono text-label-mono mt-1">홈</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-mono text-label-mono mt-1">내 모임</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-mono text-label-mono mt-1">추천</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-mono text-label-mono mt-1">프로필</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for refresh button
+        const refreshBtn = document.querySelector('button:has(.material-symbols-outlined[data-icon="refresh"])');
+        if(refreshBtn) {
+            refreshBtn.addEventListener('click', () => {
+                const icon = refreshBtn.querySelector('.material-symbols-outlined');
+                icon.style.transition = 'transform 0.5s ease-in-out';
+                icon.style.transform = 'rotate(360deg)';
+                setTimeout(() => {
+                    icon.style.transform = 'rotate(0deg)';
+                }, 500);
+            });
+        }
+    </script>
+</body></html>

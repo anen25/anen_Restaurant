@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#191c1e",
+                    "primary-container": "#131b2e",
+                    "on-error": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "on-secondary-fixed": "#00174b",
+                    "secondary-fixed": "#dbe1ff",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "surface-container-highest": "#e0e3e5",
+                    "member-tag-text": "#1E40AF",
+                    "surface-container-low": "#f2f4f6",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdbca",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-dim": "#d8dadc",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary-container": "#cf6721",
+                    "tertiary-container": "#331200",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "success-green": "#059669",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#000000",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "member-tag-bg": "#EFF6FF",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "error": "#ba1a1a",
+                    "tertiary": "#000000",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary-fixed": "#331200",
+                    "outline": "#76777d",
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "premium-gold": "#D97706",
+                    "outline-variant": "#c6c6cd",
+                    "background": "#f7f9fb",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#0051d5",
+                    "error-red": "#DC2626",
+                    "on-primary-container": "#7c839b",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#dae2fd",
+                    "secondary-container": "#316bf3",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-secondary-container": "#fefcff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-sm": "8px",
+                    "gutter-md": "16px",
+                    "gutter-lg": "24px",
+                    "base": "4px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "max-width": "1200px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-mono": ["JetBrains Mono"],
+                    "status-badge": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="text-on-surface">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 bg-surface dark:bg-on-surface border-b border-outline-variant dark:border-outline glass-header">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer active-scale transition-all duration-150">keyboard_arrow_down</span>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">고양시 소상공인연합회</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">notifications</span>
+</div>
+</header>
+<main class="pt-20 pb-24 px-4 max-w-[1200px] mx-auto min-h-screen">
+<!-- Context & Filters Section -->
+<section class="mb-gutter-lg">
+<div class="flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-secondary tracking-widest">AUGUST DINING RECOMMENDATIONS</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">8월 정기회식 추천 리스트</h2>
+<div class="flex flex-wrap gap-2 mt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span class="font-body-md text-body-md">12명</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-body-md text-body-md">백석역 인근</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant text-secondary">
+<span class="material-symbols-outlined text-[18px]">local_parking</span>
+<span class="font-body-md text-body-md font-semibold">주차 필수</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Restaurant Recommendation List -->
+<div class="space-y-4">
+<!-- Card 1: 평창갈비 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative w-full md:w-[320px] h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sophisticated Korean luxury barbecue restaurant interior with dark wood accents and warm hanging pendant lights. Large private rooms are visible through glass partitions, showcasing a clean and professional corporate dining environment. The lighting is soft and golden, highlighting the upscale atmosphere of a high-end member-owned establishment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRrjNuqMLdnKouDcDOjy8ljFE8amcIL99gFZixzmhSN9Wqg5gpyNMv31Nh_3PhUqmNEQUUY2CsQbve8qoUrh5yr3RhCarBkPXYmTPZjpV_TKinYcwRjD8o5SCE-cXTr5kmHYqmdKgJzL5aT-4XYTYT-jczTcKU1Zc5718-cgw93ZZ_Aia6QP7I46p_Axt1HGwoXQW1hs13OpuZ1nIvl6k5V3-9vg0CZGfGsmJjBBlQRqg2FHewpeCN">
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2.5 py-1 rounded bg-premium-gold text-white font-status-badge text-status-badge flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                회원사 운영
+                            </span>
+</div>
+</div>
+<div class="flex-1 p-gutter-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md font-bold">평창갈비</h3>
+<span class="text-secondary font-label-mono text-label-mono">D-7</span>
+</div>
+<!-- Match Reasons -->
+<div class="bg-surface-container-low p-3 rounded-lg mb-4">
+<p class="font-label-mono text-label-mono text-on-surface-variant mb-2">MATCH REASON (아는 식당)</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">최근 3개월 미방문으로 새로운 분위기</span>
+</li>
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">최대 20인 수용 가능한 대형 프라이빗 룸 보유</span>
+</li>
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">전용 주차장 20대 이상 주차 가능</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white font-body-md h-12 rounded-lg active-scale transition-all font-semibold">선택하기</button>
+<button class="px-4 border border-outline-variant rounded-lg hover:bg-surface-container-low active-scale transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: 일산횟집 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative w-full md:w-[320px] h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern and bright seafood restaurant with white marble tabletops and oceanic blue interior accents. The space is filled with bright natural daylight, creating a clean and fresh aesthetic. Professional presentation of fresh sashimi platters on a minimalist table set for a group. The style is crisp, contemporary, and business-friendly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrWYcHIkay87a9yHxg-egAJtT7RfAc52OHOP4ZN0xPPQ98EON_t--GMyTMtGIdKsixr1J0GPd8XOsEqXr-611t44ZIuPvKQbD8ZldckXnAuWgcPUauzpObTa13rY2eg-Y6b26yc42o63O0Eb582dNehLk5huO99FU6wWhLei7jgb7fZ7w4skVwLdQIJvEvNTNLFcN_yWrMKnGwB5EYqpS-3qwCslMqjmS2GdEGVq0NkRNxUeVFH28">
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-status-badge text-status-badge">우대 예약</span>
+</div>
+</div>
+<div class="flex-1 p-gutter-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md font-bold">일산횟집</h3>
+<div class="flex items-center text-premium-gold">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-mono text-label-mono font-bold ml-0.5">4.8</span>
+</div>
+</div>
+<span class="text-on-surface-variant font-label-mono text-label-mono">RECOMMENDED</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg mb-4">
+<p class="font-label-mono text-label-mono text-on-surface-variant mb-2">MATCH REASON (아는 식당)</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">1인당 예산 범위(5만원) 내 최적의 구성</span>
+</li>
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">연합회 연결자 우대 서비스 제공 (주류 서비스)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white font-body-md h-12 rounded-lg active-scale transition-all font-semibold">선택하기</button>
+<button class="px-4 border border-outline-variant rounded-lg hover:bg-surface-container-low active-scale transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: 진수성찬 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative w-full md:w-[320px] h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A traditional Korean hanok-style restaurant with elegant wooden rafters and soft paper-lamp lighting. The atmosphere is peaceful and scholarly, perfect for a focused business discussion. A wide variety of Korean side dishes (banchan) are neatly arranged on a traditional low table, showcasing abundance and hospitality. High-contrast lighting emphasizes the organic textures of wood and ceramics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA68K2cxSMjWa2dVZvKJ0l-Tahu5JiX_6FVO-PrrekE8kzqHE4x70hVJvfHcHoBEGL2cbI8xr0O7JjiapSdNAxUoyIGyuog5UCb1EKn_0TnvNetQ-_QKcJwNll-XRR8ju-_deA0Wt7XpZFthYBiwkEYi_NbbtMepuSqDfv0BRhW50TNUI54HzO9PnKMKp0vwiCUo9DoxTcI5TRfeit26b7Y_6k1ef2LqhG3p6LZq8F7pZUTUGzxlDSK">
+</div>
+<div class="flex-1 p-gutter-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md font-bold">진수성찬</h3>
+<span class="text-on-surface-variant font-label-mono text-label-mono">HISTORY CLEAN</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg mb-4">
+<p class="font-label-mono text-label-mono text-on-surface-variant mb-2">MATCH REASON (아는 식당)</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">최근 방문 5곳 제외 필터 통과</span>
+</li>
+<li class="flex items-center gap-2 text-body-md">
+<span class="material-symbols-outlined text-success-green text-[18px]">check_circle</span>
+<span class="">건물 내 지하 주차장 이용 용이</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white font-body-md h-12 rounded-lg active-scale transition-all font-semibold">선택하기</button>
+<button class="px-4 border border-outline-variant rounded-lg hover:bg-surface-container-low active-scale transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Request More Button -->
+<div class="mt-8 mb-12">
+<button class="w-full py-4 border-2 border-dashed border-outline text-on-surface-variant font-body-lg rounded-xl hover:bg-surface-container transition-colors flex items-center justify-center gap-2 active-scale">
+<span class="material-symbols-outlined">refresh</span>
+                다른 후보 요청하기
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-4 bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_-4px_12px_rgba(15,23,42,0.08)] rounded-t-xl h-16">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-primary-container/20 transition-all cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">hub</span>
+<span class="font-body-sm text-body-sm">홈</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-bold hover:bg-surface-container dark:hover:bg-primary-container/20 transition-all cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-body-sm text-body-sm">예약</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-primary-container/20 transition-all cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-body-sm text-body-sm">탐색</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-primary-container/20 transition-all cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-body-sm text-body-sm">마이</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Toggle favorite state
+        document.querySelectorAll('button .material-symbols-outlined').forEach(icon => {
+            if (icon.textContent === 'favorite') {
+                icon.parentElement.addEventListener('click', function() {
+                    const isFilled = this.querySelector('.material-symbols-outlined').style.fontVariationSettings.includes("'FILL' 1");
+                    if (isFilled) {
+                        this.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+                        this.querySelector('.material-symbols-outlined').classList.replace('text-error-red', 'text-on-surface-variant');
+                    } else {
+                        this.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+                        this.querySelector('.material-symbols-outlined').classList.replace('text-on-surface-variant', 'text-error-red');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body></html>

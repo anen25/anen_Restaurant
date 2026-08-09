@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="en" class="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#45464d",
+                      "inverse-on-surface": "#eff1f3",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdbca",
+                      "on-background": "#191c1e",
+                      "primary-fixed": "#dae2fd",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#0051d5",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb68e",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "on-tertiary-container": "#cf6721",
+                      "background": "#f7f9fb",
+                      "on-primary-fixed": "#131b2e",
+                      "member-tag-bg": "#EFF6FF",
+                      "member-tag-text": "#1E40AF",
+                      "tertiary-container": "#331200",
+                      "on-secondary-container": "#fefcff",
+                      "primary-fixed-dim": "#bec6e0",
+                      "surface-variant": "#e0e3e5",
+                      "primary": "#000000",
+                      "primary-container": "#131b2e",
+                      "surface": "#f7f9fb",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "surface-container-low": "#f2f4f6",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "tertiary": "#000000",
+                      "success-green": "#059669",
+                      "on-surface": "#191c1e",
+                      "secondary-container": "#316bf3",
+                      "on-primary": "#ffffff",
+                      "premium-gold": "#D97706",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "outline-variant": "#c6c6cd",
+                      "outline": "#76777d",
+                      "on-secondary-fixed": "#00174b",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-container": "#7c839b",
+                      "surface-tint": "#565e74",
+                      "secondary-fixed": "#dbe1ff",
+                      "on-tertiary-fixed-variant": "#763300",
+                      "inverse-primary": "#bec6e0",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-tertiary-fixed": "#331200",
+                      "surface-bright": "#f7f9fb",
+                      "error-red": "#DC2626"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "gutter-md": "16px",
+                      "max-width": "1200px",
+                      "gutter-sm": "8px",
+                      "gutter-lg": "24px",
+                      "margin-mobile": "16px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-sm": ["Inter"],
+                      "label-mono": ["JetBrains Mono"],
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "status-badge": ["Inter"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                      "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "status-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    }catch(_e){}</script></head><body class="font-body-md text-body-md overflow-x-hidden">
+
+    <!-- TopAppBar -->
+    <header class="sticky top-0 z-50 flex justify-between items-center px-margin-desktop py-gutter-md w-full bg-background border-b border-outline-variant">
+        <div class="flex items-center space-x-gutter-sm">
+            <span class="material-symbols-outlined text-primary text-[28px]">shield</span>
+            <h1 class="font-headline-lg text-headline-lg font-bold text-primary">운영 관리 허브</h1>
+        </div>
+        <div class="flex items-center space-x-gutter-lg">
+            <nav class="hidden md:flex space-x-gutter-lg">
+                <a href="#" class="text-secondary font-bold hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg">Overview</a>
+                <a href="#" class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg">Reports</a>
+                <a href="#" class="text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg">Settings</a>
+            </nav>
+            <div class="cursor-pointer active:opacity-80 flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold">A</div>
+                <span class="hidden sm:inline font-semibold navy-text">Admin Profile</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen">
+        <!-- NavigationDrawer (Desktop Only) -->
+        <aside class="hidden md:flex flex-col h-screen w-64 sticky left-0 top-0 bg-surface-container-low border-r border-outline-variant p-gutter-md space-y-base">
+            <div class="mb-gutter-lg py-4">
+                <span class="font-headline-md text-headline-md font-black tracking-tight text-primary">ADMIN SHIELD</span>
+            </div>
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center space-x-3 p-3 bg-secondary-container text-on-secondary-container rounded-lg font-semibold transition-all duration-200">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    <span class="">Overview</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-all duration-200">
+                    <span class="material-symbols-outlined">rule</span>
+                    <span class="">Approvals</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-all duration-200">
+                    <span class="material-symbols-outlined">history_edu</span>
+                    <span class="">System Logs</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-all duration-200">
+                    <span class="material-symbols-outlined">handshake</span>
+                    <span class="">Partner Management</span>
+                </a>
+            </nav>
+            <div class="pt-10 mt-auto">
+                <div class="p-4 bg-primary-container text-on-primary-container rounded-xl">
+                    <p class="text-xs opacity-70 mb-1">System Health</p>
+                    <p class="font-bold text-sm">All Nodes Stable</p>
+                    <div class="w-full bg-white/20 h-1 mt-2 rounded-full overflow-hidden">
+                        <div class="bg-success-green h-full w-[94%]"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Canvas -->
+        <main class="flex-1 p-margin-mobile md:p-margin-desktop overflow-y-auto pb-24 md:pb-10">
+            
+            <!-- Section 1: Overview Summary KPIs -->
+            <section class="mb-gutter-lg">
+                <div class="flex justify-between items-end mb-gutter-md"><h2 class="font-headline-md text-headline-md navy-text">시스템 운영 현황</h2><span class="text-body-sm text-on-surface-variant">최근 업데이트: 오늘 오전 09:42</span></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md">
+                    <div class="glass-card p-gutter-md rounded-xl kpi-border">
+                        <p class="text-on-surface-variant text-body-sm uppercase tracking-wider font-semibold">전체 등록 모임</p>
+                        <div class="flex items-baseline space-x-2 mt-2">
+                            <span class="font-headline-lg text-headline-lg navy-text">124</span>
+                            <span class="text-success-green text-body-sm font-bold">↑ 4.2%</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-gutter-md rounded-xl kpi-border">
+                        <p class="text-on-surface-variant text-body-sm uppercase tracking-wider font-semibold">등록 식당 수</p>
+                        <div class="flex items-baseline space-x-2 mt-2">
+                            <span class="font-headline-lg text-headline-lg navy-text">412</span>
+                            <span class="text-success-green text-body-sm font-bold">↑ 12</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-gutter-md rounded-xl kpi-border"><p class="text-on-surface-variant text-body-sm uppercase tracking-wider font-semibold">이번 달 유지관리비 매출</p><div class="flex items-baseline space-x-2 mt-2"><span class="font-headline-lg text-headline-lg navy-text">₩4.25M</span><span class="text-on-surface-variant text-body-sm">목표: ₩500만</span></div></div>
+                    <div class="glass-card p-gutter-md rounded-xl kpi-border">
+                        <p class="text-on-surface-variant text-body-sm uppercase tracking-wider font-semibold">목표 달성률</p>
+                        <div class="flex items-baseline space-x-2 mt-2">
+                            <span class="font-headline-lg text-headline-lg navy-text">85%</span>
+                            <div class="flex-1 ml-4 bg-surface-container h-2 rounded-full overflow-hidden">
+                                <div class="bg-secondary h-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Middle Section: Pending Approvals & Anomalies -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg mb-gutter-lg">
+                <!-- Pending Approval Queue -->
+                <div class="lg:col-span-7 glass-card rounded-xl flex flex-col">
+                    <div class="p-gutter-md border-b border-outline-variant flex justify-between items-center"><h3 class="navy-text font-bold flex items-center"><span class="material-symbols-outlined mr-2 text-secondary">pending_actions</span>승인 대기 목록</h3><button class="text-secondary font-semibold text-body-sm hover:underline">전체보기</button></div>
+                    <div class="p-0 overflow-hidden">
+                        <div class="divide-y divide-outline-variant">
+                            <!-- Organization Items -->
+                            <div class="p-4 hover:bg-surface-container-low flex justify-between items-center group transition-colors">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 bg-member-tag-bg rounded-lg flex items-center justify-center text-member-tag-text">
+                                        <span class="material-symbols-outlined">corporate_fare</span>
+                                    </div>
+                                    <div class="">
+                                        <p class="font-bold navy-text">NexGen Solutions Inc.</p>
+                                        <p class="text-body-sm text-on-surface-variant">50+ Employees • Tech Sector</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="px-3 py-1 bg-secondary text-white text-xs font-bold rounded">Approve</button>
+                                    <button class="px-3 py-1 border border-outline text-on-surface-variant text-xs font-bold rounded">Details</button>
+                                </div>
+                            </div>
+                            <div class="p-4 hover:bg-surface-container-low flex justify-between items-center group transition-colors">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 bg-member-tag-bg rounded-lg flex items-center justify-center text-member-tag-text">
+                                        <span class="material-symbols-outlined">corporate_fare</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold navy-text">Global Logistics Group</p>
+                                        <p class="text-body-sm text-on-surface-variant">120+ Employees • Operations</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="px-3 py-1 bg-secondary text-white text-xs font-bold rounded">Approve</button>
+                                    <button class="px-3 py-1 border border-outline text-on-surface-variant text-xs font-bold rounded">Details</button>
+                                </div>
+                            </div>
+                            <!-- Restaurant Items -->
+                            <div class="p-4 hover:bg-surface-container-low flex justify-between items-center group transition-colors">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 bg-tertiary-fixed rounded-lg flex items-center justify-center text-on-tertiary-fixed-variant">
+                                        <span class="material-symbols-outlined">restaurant</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold navy-text">The Blue Marrow</p>
+                                        <p class="text-body-sm text-on-surface-variant">Fine Dining • Seoul Hub</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="px-3 py-1 bg-secondary text-white text-xs font-bold rounded">Approve</button>
+                                    <button class="px-3 py-1 border border-outline text-on-surface-variant text-xs font-bold rounded">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-surface-container-lowest text-center">
+                            <p class="text-body-sm text-on-surface-variant italic">+ 5건의 추가 심사 대기 중</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Alerts & Anomalies -->
+                <div class="lg:col-span-5 flex flex-col space-y-gutter-md">
+                    <div class="glass-card rounded-xl p-gutter-md h-full">
+                        <div class="flex justify-between items-center mb-4"><h3 class="navy-text font-bold flex items-center"><span class="material-symbols-outlined mr-2 text-error">report_problem</span>시스템 이상징후 및 알림</h3><span class="bg-error-container text-on-error-container text-[10px] font-bold px-2 py-0.5 rounded-full">4건 활성</span></div>
+                        <div class="space-y-3">
+                            <div class="p-3 border border-outline-variant rounded-lg flex items-start space-x-3 bg-error-container/10">
+                                <span class="material-symbols-outlined text-error mt-0.5">credit_card_off</span>
+                                <div class="flex-1"><div class="flex justify-between"><p class="font-bold text-sm navy-text">결제 실패 (T+1 자동청구)</p><span class="status-badge px-2 py-0.5 rounded text-[10px] severity-urgent">긴급</span></div><p class="text-xs text-on-surface-variant mt-1">식당 유지관리비 결제 3회 실패</p></div>
+                            </div>
+                            <div class="p-3 border border-outline-variant rounded-lg flex items-start space-x-3">
+                                <span class="material-symbols-outlined text-premium-gold mt-0.5">trending_down</span>
+                                <div class="flex-1"><div class="flex justify-between"><p class="font-bold text-sm navy-text">신뢰 점수 급락</p><span class="status-badge px-2 py-0.5 rounded text-[10px] severity-warning">주의</span></div><p class="text-xs text-on-surface-variant mt-1">식당 '스시젠' 신뢰 점수 기준치 미달</p></div>
+                            </div>
+                            <div class="p-3 border border-outline-variant rounded-lg flex items-start space-x-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5">gavel</span>
+                                <div class="flex-1"><div class="flex justify-between"><p class="font-bold text-sm navy-text">총무 인계 분쟁</p><span class="status-badge px-2 py-0.5 rounded text-[10px] severity-warning">주의</span></div><p class="text-xs text-on-surface-variant mt-1">사례 #8921: 권한 이양 관련 사용자 이의 제기</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Section: Partner Growth Chart -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+                <div class="lg:col-span-8 glass-card rounded-xl p-gutter-md">
+                    <div class="flex justify-between items-center mb-6"><div><h3 class="navy-text font-bold">파트너 성장 추이</h3><p class="text-body-sm text-on-surface-variant">협회 및 협력사 (최근 4개월)</p></div><div class="flex space-x-2"><span class="flex items-center text-[10px] font-bold"><span class="w-2 h-2 rounded-full bg-secondary mr-1"></span> 협회</span><span class="flex items-center text-[10px] font-bold"><span class="w-2 h-2 rounded-full bg-primary mr-1"></span> 협력사</span></div></div>
+                    <!-- Mock Bar Chart -->
+                    <div class="flex items-end justify-between h-48 px-4 border-b border-outline-variant relative">
+                        <!-- Y-axis indicators (bg) -->
+                        <div class="absolute inset-x-0 top-0 bottom-0 flex flex-col justify-between pointer-events-none opacity-20">
+                            <div class="border-t border-on-surface-variant w-full"></div>
+                            <div class="border-t border-on-surface-variant w-full"></div>
+                            <div class="border-t border-on-surface-variant w-full"></div>
+                            <div class="border-t border-on-surface-variant w-full"></div>
+                        </div>
+
+                        <!-- Sep -->
+                        <div class="flex flex-col items-center space-y-2 flex-1">
+                            <div class="flex space-x-1 items-end">
+                                <div class="w-6 bg-secondary rounded-t-sm" style="height: 60px;"></div>
+                                <div class="w-6 bg-primary rounded-t-sm" style="height: 40px;"></div>
+                            </div>
+                            <span class="font-label-mono text-[10px] text-on-surface-variant">9월</span>
+                        </div>
+                        <!-- Oct -->
+                        <div class="flex flex-col items-center space-y-2 flex-1">
+                            <div class="flex space-x-1 items-end">
+                                <div class="w-6 bg-secondary rounded-t-sm" style="height: 85px;"></div>
+                                <div class="w-6 bg-primary rounded-t-sm" style="height: 55px;"></div>
+                            </div>
+                            <span class="font-label-mono text-[10px] text-on-surface-variant">10월</span>
+                        </div>
+                        <!-- Nov -->
+                        <div class="flex flex-col items-center space-y-2 flex-1">
+                            <div class="flex space-x-1 items-end">
+                                <div class="w-6 bg-secondary rounded-t-sm" style="height: 110px;"></div>
+                                <div class="w-6 bg-primary rounded-t-sm" style="height: 70px;"></div>
+                            </div>
+                            <span class="font-label-mono text-[10px] text-on-surface-variant">11월</span>
+                        </div>
+                        <!-- Dec -->
+                        <div class="flex flex-col items-center space-y-2 flex-1">
+                            <div class="flex space-x-1 items-end">
+                                <div class="w-6 bg-secondary rounded-t-sm" style="height: 140px;"></div>
+                                <div class="w-6 bg-primary rounded-t-sm" style="height: 95px;"></div>
+                            </div>
+                            <span class="font-label-mono text-[10px] text-on-surface-variant">12월</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="lg:col-span-4 glass-card rounded-xl p-gutter-md flex flex-col justify-center items-center text-center relative overflow-hidden"><div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full"></div><div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full"></div><span class="material-symbols-outlined text-secondary text-5xl mb-4">verified</span><h4 class="navy-text font-bold mb-2">운영 안정성 검증 완료</h4><p class="text-body-sm text-on-surface-variant px-4">현재 모든 운영 데이터가 4분기 투명성 및 공정성 원칙 가이드를 준수하고 있습니다.</p><button class="mt-6 px-6 py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">운영 보고서 생성</button></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-surface-container-lowest py-gutter-sm pb-safe md:hidden border-t border-outline-variant shadow-lg">
+        <a href="#" class="flex flex-col items-center justify-center text-secondary font-bold scale-95 transition-transform">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="text-[10px] mt-1 font-label-mono">현황</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary scale-95 transition-transform">
+            <span class="material-symbols-outlined">rule</span>
+            <span class="text-[10px] mt-1 font-label-mono">심사</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary scale-95 transition-transform">
+            <span class="material-symbols-outlined">history_edu</span>
+            <span class="text-[10px] mt-1 font-label-mono">로그</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary scale-95 transition-transform">
+            <span class="material-symbols-outlined">handshake</span>
+            <span class="text-[10px] mt-1 font-label-mono">파트너</span>
+        </a>
+    </nav>
+
+    <script class="">
+        // Micro-interactions for hover effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('border-secondary/30');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('border-secondary/30');
+            });
+        });
+
+        // Simple animation for the progress bar on load
+        window.addEventListener('load', () => {
+            const bars = document.querySelectorAll('.rounded-t-sm');
+            bars.forEach(bar => {
+                const finalHeight = bar.style.height;
+                bar.style.height = '0px';
+                setTimeout(() => {
+                    bar.style.transition = 'height 1s cubic-bezier(0.17, 0.67, 0.8</script></body></html>

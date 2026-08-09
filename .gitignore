@@ -1,0 +1,14 @@
+# Node & Next.js
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+**/out/
+build/
+**/build/
+.DS_Store
+*.log
+.env*
+.idea/
+.vscode/
