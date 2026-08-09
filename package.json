@@ -7,6 +7,7 @@
         "pages:build": "cd web && npm install --legacy-peer-deps && npx @cloudflare/next-on-pages"
     },
     "overrides": {
-        "@cloudflare/workers-types": "^4.20240208.0"
+        "@cloudflare/workers-types": "4.20240208.0",
+        "wrangler": "3.100.0"
     }
 }
